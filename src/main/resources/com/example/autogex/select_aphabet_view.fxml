@@ -47,10 +47,11 @@
       </HBox>
       <HBox>
          <children>
-            <Label text="Entrer d’autres symboles separer par des virgules" />
+            <Label text="Entrer d’autres symboles separer par des espaces" />
          </children>
       </HBox>
       <TextField fx:id="textField" styleClass="textfield" />
+      <Label fx:id="alphabet" />
       <Button mnemonicParsing="false" onAction="#onNext" text="Continuer" />
    </children>
 </VBox>
