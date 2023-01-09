@@ -9,7 +9,7 @@ public class VerificationController {
     protected void onNext(ActionEvent event){
         alertBox("Le mot n'appartient pas a l'automate");
     }
-    private void  alertBox(String str){
+    public static void  alertBox(String str){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Information Dialog");
         alert.setHeaderText(null);

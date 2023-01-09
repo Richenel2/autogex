@@ -1,6 +1,7 @@
 package com.example.autogex;
 
 import com.example.autogex.infos.QuestionInfo;
+import com.example.autogex.verfieAlpha.AmbigueAlphabet;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -58,6 +59,14 @@ public class SelectAlphabetController {
     @FXML
     protected void onNext(ActionEvent event) throws IOException {
         QuestionInfo.alphabet.addAll(List.of(textField.getText().split(",")));
+        try{
+            final List<String> hi =new AmbigueAlphabet().verifierAlphabet(QuestionInfo.alphabet);
+        }catch (Exception e){
+            VerificationController.alertBox(e.getMessage());
+            QuestionInfo.alphabet.removeAll(List.of(textField.getText().split(",")));
+            return;
+        }
+
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(WelcomeController.class.getResource("part_view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1000, 600);

@@ -5,32 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9942da1f-2432-4a23-a7a6-9dcdc21c1ef8" name="Changes" comment="chang">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/EtatsFinauxController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/EtatsInitiauxController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/NombreEtatController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/ReGexController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/SelectTypeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/TransitionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/VerificationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/infos/Transition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/infos/TransitionTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/autogex/SelectTypeView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/autogex/add_transition_view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/autogex/etats_final_view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/autogex/etats_initiaux_view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/autogex/nombre_etats_view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/autogex/regex_view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/autogex/verification_view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/verfieAlpha/ConstructeurAutomateImplementation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/autogex/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/autogex/Question_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/Question_Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/autogex/WelcomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/WelcomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/autogex/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/autogex/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/autogex/part_view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/autogex/part_view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/autogex/question_view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/autogex/question_view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/autogex/select_aphabet_view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/autogex/select_aphabet_view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/autogex/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/autogex/styles/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/autogex/welcome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/autogex/welcome.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/autogex/SelectAlphabetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/SelectAlphabetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/autogex/VerificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/VerificationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/autogex/infos/QuestionInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/infos/QuestionInfo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -70,19 +49,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/kayra/Desktop/automate&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/home/kayra/IntelliJIDEAProjects/autogex/src/main/java/com/example/autogex",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.example.autogex.infos" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/example/autogex" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/com/example/autogex" />
