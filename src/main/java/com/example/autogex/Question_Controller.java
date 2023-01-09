@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
@@ -15,7 +16,6 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.List;
 
 public class Question_Controller {
     int step=1;
@@ -60,18 +60,25 @@ public class Question_Controller {
             caracterMulti.setText("");
             number.setText("");
         });
+        alertBox();
     }
     @FXML
     protected void onNext(ActionEvent event) throws IOException {
         step++;
         if(step<=QuestionInfo.numberOfPart) {
-            stepLabel.setText(String.valueOf(step));
-            question.maxSize=Integer.parseInt(maxSize.getText());
-            maxSize.setText("");
-            question.minSize=Integer.parseInt(minSize.getText());
-            minSize.setText("");
-            question.fixedSize=Integer.parseInt(fixedSize.getText());
+            try {
+                stepLabel.setText(String.valueOf(step));
+                question.maxSize=Integer.parseInt(maxSize.getText());
+                question.minSize=Integer.parseInt(minSize.getText());
+                question.fixedSize=Integer.parseInt(fixedSize.getText());
+                fixedSize.setText("");
+            }catch (NumberFormatException ignored){
+
+            }
+
             fixedSize.setText("");
+            minSize.setText("");
+            maxSize.setText("");
             String suff = suffix.getText();
             if(!suff.isEmpty()){
                 question.suffix.add(suff);
@@ -95,8 +102,19 @@ public class Question_Controller {
             caracterMulti.setText("");
             QuestionInfo.questions.add(question);
             question=new Question();
+            alertBox();
         }else{
-            return;
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(WelcomeController.class.getResource("verification_view.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 1000, 600);
+            stage.setScene(scene);
         }
+    }
+    private void  alertBox(){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Information Dialog");
+        alert.setHeaderText(null);
+        alert.setContentText("Repondez aux question sur la partie "+step+" de votre mot");
+        alert.showAndWait();
     }
 }

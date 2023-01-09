@@ -5,6 +5,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
 import java.io.IOException;
@@ -25,6 +26,8 @@ public class HelloApplication extends Application {
             });
             pauseTransition.play();
         });
+//        stage.initStyle(StageStyle.TRANSPARENT);
+
        stage.show();
     }
 
