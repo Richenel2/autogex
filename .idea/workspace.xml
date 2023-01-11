@@ -5,11 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9942da1f-2432-4a23-a7a6-9dcdc21c1ef8" name="Changes" comment="chang">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/verfieAlpha/ConstructeurAutomateImplementation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/automate/AutomateTransition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/automate/Tuple.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/infos/AppConst.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/infos/Type.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/autogex/EtatsFinauxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/EtatsFinauxController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/autogex/EtatsInitiauxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/EtatsInitiauxController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/autogex/NombreEtatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/NombreEtatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/autogex/PartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/PartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/autogex/Question_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/Question_Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/autogex/SelectAlphabetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/SelectAlphabetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/autogex/TransitionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/TransitionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/autogex/VerificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/VerificationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/autogex/infos/QuestionInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/infos/QuestionInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/autogex/infos/Transition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/infos/Transition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/autogex/infos/TransitionTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/infos/TransitionTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/autogex/verfieAlpha/AmbigueAlphabet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/verfieAlpha/AmbigueAlphabet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/autogex/verification_view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/autogex/verification_view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/autogex/welcome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/autogex/welcome.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +70,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "/home/kayra/IntelliJIDEAProjects/autogex/src/main/java/com/example/autogex",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>

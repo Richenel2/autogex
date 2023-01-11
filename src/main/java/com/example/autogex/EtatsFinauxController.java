@@ -1,5 +1,6 @@
 package com.example.autogex;
 
+import com.example.autogex.infos.AppConst;
 import com.example.autogex.infos.TransitionTable;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,15 +18,15 @@ public class EtatsFinauxController {
     HBox hBox;
     @FXML
     public void initialize(){
-        for (int i = 1; i <= TransitionTable.numberEtat; i++) {
+        for (int i = 1; i <= AppConst.transitionTable.numberEtat; i++) {
             Button btn = new Button(String.valueOf(i));
             int finalI = i;
             btn.setOnMouseClicked(a->{
-                if(!TransitionTable.etatsFinaux.contains(finalI)){
-                    TransitionTable.etatsFinaux.add(finalI);
+                if(!AppConst.transitionTable.etatsFinaux.contains(finalI)){
+                    AppConst.transitionTable.etatsFinaux.add(finalI);
                     btn.setStyle("-fx-background-color: #41E906;");
                 }else{
-                    TransitionTable.etatsFinaux.remove(Integer.valueOf(finalI));
+                    AppConst.transitionTable.etatsFinaux.remove(Integer.valueOf(finalI));
                     btn.setStyle("-fx-background-color: #2E5DD6;");
                 }
             });
@@ -34,6 +35,9 @@ public class EtatsFinauxController {
     }
     @FXML
     protected void onNext(ActionEvent event) throws IOException {
+        if(AppConst.transitionTable.etatsFinaux.isEmpty()){
+            VerificationController.alertBox("Vous devez avoir au moins 1 etat final ");
+        }
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(WelcomeController.class.getResource("add_transition_view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1000, 600);

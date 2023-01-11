@@ -10,8 +10,7 @@ public class AmbigueAlphabet {
 
 
     public List<String> EliminerDoublons(List<String> alphabet) {
-        Set<String> tempAlphabet = new LinkedHashSet();
-        tempAlphabet.addAll(alphabet);
+        Set<String> tempAlphabet = new LinkedHashSet<String>(alphabet);
         alphabet.clear();
         alphabet.addAll(tempAlphabet);
         return alphabet;
@@ -21,23 +20,20 @@ public class AmbigueAlphabet {
         List<String> alphabetWithNotDoublons = this.EliminerDoublons(alphabet);
         ArrayList<Integer> lengthWord = new ArrayList();
 
-        for(int i = 0; i < alphabetWithNotDoublons.size(); ++i) {
-            lengthWord.add(((String)alphabetWithNotDoublons.get(i)).length());
+        for (String alphabetWithNotDoublon : alphabetWithNotDoublons) {
+            lengthWord.add(alphabetWithNotDoublon.length());
         }
 
-        List<String> newList = (List)lengthWord.stream().map(String::valueOf).collect(Collectors.toList());
+        List<String> newList = lengthWord.stream().map(String::valueOf).collect(Collectors.toList());
         newList = this.EliminerDoublons(newList);
-        List<Integer> NewlengthWord = (List)newList.stream().map((s) -> {
-            return Integer.parseInt(s);
-        }).collect(Collectors.toList());
-        return NewlengthWord;
+        return newList.stream().map(Integer::parseInt).collect(Collectors.toList());
     }
 
     public static Integer getMin(List<Integer> list) {
         if (list != null && list.size() != 0) {
-            List<Integer> sortedList = new ArrayList(list);
+            List<Integer> sortedList = new ArrayList<Integer>(list);
             Collections.sort(sortedList);
-            return (Integer)sortedList.get(0);
+            return sortedList.get(0);
         } else {
             return Integer.MAX_VALUE;
         }
@@ -50,9 +46,10 @@ public class AmbigueAlphabet {
     public String isContaint(String s, List<String> list) {
         String a = "false";
 
-        for(int i = 0; i < list.size(); ++i) {
-            if (s.equals(list.get(i))) {
+        for (String value : list) {
+            if (s.equals(value)) {
                 a = "true";
+                break;
             }
         }
 

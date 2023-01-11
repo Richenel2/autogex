@@ -1,8 +1,6 @@
 package com.example.autogex;
 
-import com.example.autogex.infos.Question;
-import com.example.autogex.infos.QuestionInfo;
-import com.example.autogex.infos.Repetition;
+import com.example.autogex.infos.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -65,7 +63,7 @@ public class Question_Controller {
     @FXML
     protected void onNext(ActionEvent event) throws IOException {
         step++;
-        if(step<=QuestionInfo.numberOfPart) {
+        if(step<= AppConst.questionInfo.numberOfPart) {
             try {
                 stepLabel.setText(String.valueOf(step));
                 question.maxSize=Integer.parseInt(maxSize.getText());
@@ -79,6 +77,9 @@ public class Question_Controller {
             fixedSize.setText("");
             minSize.setText("");
             maxSize.setText("");
+            hBox2.getChildren().clear();
+            hBox3.getChildren().clear();
+            hBox4.getChildren().clear();
             String suff = suffix.getText();
             if(!suff.isEmpty()){
                 question.suffix.add(suff);
@@ -100,10 +101,11 @@ public class Question_Controller {
             suffix.setText("");
             number.setText("");
             caracterMulti.setText("");
-            QuestionInfo.questions.add(question);
+            AppConst.questionInfo.questions.add(question.copy());
             question=new Question();
             alertBox();
         }else{
+            AppConst.type= Type.Question;
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(WelcomeController.class.getResource("verification_view.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1000, 600);
@@ -117,4 +119,6 @@ public class Question_Controller {
         alert.setContentText("Repondez aux question sur la partie "+step+" de votre mot");
         alert.showAndWait();
     }
+
+
 }

@@ -1,5 +1,6 @@
 package com.example.autogex;
 
+import com.example.autogex.infos.AppConst;
 import com.example.autogex.infos.QuestionInfo;
 import com.example.autogex.infos.TransitionTable;
 import javafx.event.ActionEvent;
@@ -23,7 +24,7 @@ public class NombreEtatController {
     @FXML
     protected void onChange(){
         try {
-            QuestionInfo.numberOfPart = Integer.parseInt(textField.getText());
+            AppConst.questionInfo.numberOfPart = Integer.parseInt(textField.getText());
             error.setText("");
         }catch (NumberFormatException e){
             error.setText("Veillez inserer un nombre");
@@ -32,13 +33,17 @@ public class NombreEtatController {
     @FXML
     protected void onNext(ActionEvent event) throws IOException {
         try {
-            TransitionTable.numberEtat = Integer.parseInt(textField.getText());
+            AppConst.transitionTable.numberEtat = Integer.parseInt(textField.getText());
         }catch (NumberFormatException e){
             error.setText("Veillez inserer un nombre");
             return;
         }
-        if(TransitionTable.numberEtat<=0){
-            error.setText("Veillez inserer un nombre positif");
+        if(AppConst.transitionTable.numberEtat<=0){
+            error.setText("Veillez inserer un nombre positif ");
+            return;
+        }
+        if( AppConst.transitionTable.numberEtat>50){
+            error.setText("Vous pouvez avoir au maximum 50 transitions 😓");
             return;
         }
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

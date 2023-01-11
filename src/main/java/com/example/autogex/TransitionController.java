@@ -1,7 +1,9 @@
 package com.example.autogex;
 
+import com.example.autogex.infos.AppConst;
 import com.example.autogex.infos.Transition;
 import com.example.autogex.infos.TransitionTable;
+import com.example.autogex.infos.Type;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -42,15 +44,17 @@ public class TransitionController {
     }
     @FXML
     protected void onNext(ActionEvent event)throws IOException {
+        addTransition(null);
         hBox.getChildren().clear();
         error.setText("");
         symbole.setText("");
         nextEtat.setText("");
-        if(step<TransitionTable.numberEtat){
+        if(step< AppConst.transitionTable.numberEtat){
             step++;
             alertBox();
             etat.setText(String.valueOf(step));
         }else {
+            AppConst.type = Type.Transition;
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(WelcomeController.class.getResource("verification_view.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1000, 600);
@@ -68,8 +72,10 @@ public class TransitionController {
             error.setText("L'etat de destination doit etre un nombre");
             return;
         }
-        if(next>TransitionTable.numberEtat){
-            error.setText("Entrer un etats valide");
+        if(next>AppConst.transitionTable.numberEtat || next<=0){
+            if(event!=null){
+                error.setText("Entrer un etats valide");
+            }
             return;
         }
         if(sym.isEmpty()){
@@ -79,6 +85,8 @@ public class TransitionController {
         error.setText("");
         hBox.getChildren().add(new Button(step+"--"+sym+"-->"+next));
         Transition transition = new Transition(step,next,new ArrayList<>(List.of(sym.split(" "))));
-        TransitionTable.transitions.add(transition);
+        AppConst.transitionTable.transitions.add(transition);
+        symbole.setText("");
+        nextEtat.setText("");
     }
 }

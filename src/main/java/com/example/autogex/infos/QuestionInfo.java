@@ -4,7 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class QuestionInfo {
-    public static List<String> alphabet = new ArrayList<String>();
-    public static int numberOfPart = 0;
-    public static ArrayList<Question> questions = new ArrayList<Question>();
+    public  List<String> alphabet = new ArrayList<String>();
+    public  int numberOfPart = 0;
+    public  ArrayList<Question> questions = new ArrayList<>();
+
+    public QuestionInfo(){
+
+    }
 }

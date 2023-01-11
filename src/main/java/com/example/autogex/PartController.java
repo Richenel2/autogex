@@ -1,5 +1,6 @@
 package com.example.autogex;
 
+import com.example.autogex.infos.AppConst;
 import com.example.autogex.infos.QuestionInfo;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -22,7 +23,7 @@ public class PartController {
     @FXML
     protected void onChange(){
         try {
-            QuestionInfo.numberOfPart = Integer.parseInt(textField.getText());
+            AppConst.questionInfo.numberOfPart = Integer.parseInt(textField.getText());
             error.setText("");
         }catch (NumberFormatException e){
             error.setText("Veillez inserer un nombre");
@@ -31,7 +32,7 @@ public class PartController {
     @FXML
     protected void onNext(ActionEvent event) throws IOException {
         try {
-            QuestionInfo.numberOfPart = Integer.parseInt(textField.getText());
+            AppConst.questionInfo.numberOfPart = Integer.parseInt(textField.getText());
         }catch (NumberFormatException e){
             error.setText("Veillez inserer un nombre");
             return;
