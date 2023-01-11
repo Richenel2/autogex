@@ -100,6 +100,8 @@ public class ConstructeurAutomateImplementation3 implements ConstructeurAutomate
                         openParanthesisCount2--;
                         if(openParanthesisCount2 > 0){
                             temp2.add(s);
+                        }else{
+                            consumeGroup2 = false;
                         }
                     }else if(stringIsParanthesisLeft(s)){
                         temp2.add(s);

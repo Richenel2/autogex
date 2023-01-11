@@ -48,7 +48,7 @@ public class AutomateRegex {
         String cleanRegex = constructeurAutomate.verifierRegex(regex);
         Automate automate = constructeurAutomate.constructAutomate(Alphabet,cleanRegex);
         List<Automate.ErrorMessage> res = automate.verifierChaine(word);
-        if(Integer.valueOf((res.get(res.size()-1)).message)>0){
+        if(Integer.parseInt((res.get(res.size()-1)).message)>0){
             return true;
         }else{
             String finalRes = "";

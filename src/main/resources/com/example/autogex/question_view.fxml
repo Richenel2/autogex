@@ -26,7 +26,7 @@
             </HBox>
             <Label />
             <Label text="1. Votre expression possede t'il un nombre de caracteres maximum, minimum ou fixe?" />
-            <HBox alignment="CENTER_LEFT" spacing="30.0">
+            <HBox alignment="CENTER_LEFT" disable="true" spacing="30.0" visible="false">
                <children>
                   <VBox alignment="TOP_CENTER" spacing="20.0">
                      <children>
@@ -48,7 +48,7 @@
                   </VBox>
                </children>
             </HBox>
-            <CheckBox mnemonicParsing="false" text="2. y'a til des caracteres qui se repetent plusieurs fois?" />
+            <CheckBox mnemonicParsing="false" text="1. y'a til des caracteres qui se repetent plusieurs fois?" />
             <HBox fx:id="hBox2" spacing="20.0" />
             <HBox alignment="CENTER_LEFT" spacing="30.0">
                <children>
@@ -68,7 +68,7 @@
                   <Insets left="20.0" right="20.0" />
                </padding>
             </HBox>
-            <CheckBox layoutX="110.0" layoutY="404.0" mnemonicParsing="false" text="3. votre mot a t’il des préfixes particuliers ?" />
+            <CheckBox layoutX="110.0" layoutY="404.0" mnemonicParsing="false" text="2. votre mot a t’il des préfixes particuliers ?" />
             <HBox fx:id="hBox3" spacing="20.0" />
             <HBox alignment="CENTER_LEFT" layoutX="110.0" layoutY="452.0" spacing="30.0">
                <children>
@@ -88,7 +88,7 @@
                   <Insets left="20.0" right="20.0" />
                </padding>
             </HBox>
-            <CheckBox layoutX="110.0" layoutY="618.0" mnemonicParsing="false" text="4. votre mot a t’il des suffixes particuliers ?" />
+            <CheckBox layoutX="110.0" layoutY="618.0" mnemonicParsing="false" text="3. votre mot a t’il des suffixes particuliers ?" />
             <HBox fx:id="hBox4" />
             <HBox alignment="CENTER_LEFT" layoutX="110.0" layoutY="666.0" spacing="30.0">
                <children>

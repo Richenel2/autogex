@@ -62,46 +62,43 @@ public class Question_Controller {
     }
     @FXML
     protected void onNext(ActionEvent event) throws IOException {
+        try {
+            stepLabel.setText(String.valueOf(step));
+            question.maxSize=Integer.parseInt(maxSize.getText());
+            question.minSize=Integer.parseInt(minSize.getText());
+            question.fixedSize=Integer.parseInt(fixedSize.getText());
+            String suff = suffix.getText();
+            if(!suff.isEmpty()){
+                question.suffix.add(suff);
+            }
+        }catch (NumberFormatException ignored){}
+        String pref = prefix.getText();
+        if(!pref.isEmpty()){
+            question.prefix.add(pref);
+        }
+        if(!caracterMulti.getText().isEmpty()) {
+            Repetition repetition;
+            try {
+                repetition = new Repetition(caracterMulti.getText(), Integer.parseInt(number.getText()));
+            } catch (NumberFormatException e) {
+                repetition = new Repetition(caracterMulti.getText(), 0);
+            }
+            question.repetitions.add(repetition);
+        }
+        AppConst.questionInfo.questions.add(question.copy());
         step++;
         if(step<= AppConst.questionInfo.numberOfPart) {
-            try {
-                stepLabel.setText(String.valueOf(step));
-                question.maxSize=Integer.parseInt(maxSize.getText());
-                question.minSize=Integer.parseInt(minSize.getText());
-                question.fixedSize=Integer.parseInt(fixedSize.getText());
-                fixedSize.setText("");
-            }catch (NumberFormatException ignored){
-
-            }
-
             fixedSize.setText("");
             minSize.setText("");
             maxSize.setText("");
             hBox2.getChildren().clear();
             hBox3.getChildren().clear();
             hBox4.getChildren().clear();
-            String suff = suffix.getText();
-            if(!suff.isEmpty()){
-                question.suffix.add(suff);
-            }
-            String pref = prefix.getText();
-            if(!pref.isEmpty()){
-                question.prefix.add(pref);
-            }
-            if(!caracterMulti.getText().isEmpty()) {
-                Repetition repetition;
-                try {
-                    repetition = new Repetition(caracterMulti.getText(), Integer.parseInt(number.getText()));
-                } catch (NumberFormatException e) {
-                    repetition = new Repetition(caracterMulti.getText(), 0);
-                }
-                question.repetitions.add(repetition);
-            }
+            fixedSize.setText("");
             prefix.setText("");
             suffix.setText("");
             number.setText("");
             caracterMulti.setText("");
-            AppConst.questionInfo.questions.add(question.copy());
             question=new Question();
             alertBox();
         }else{

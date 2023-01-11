@@ -1,5 +1,8 @@
 package com.example.autogex;
 
+import com.example.autogex.infos.AppConst;
+import com.example.autogex.infos.QuestionInfo;
+import com.example.autogex.infos.TransitionTable;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,6 +13,13 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class SelectTypeController {
+
+    @FXML
+    protected void initialize(){
+        AppConst.questionInfo=new QuestionInfo();
+        AppConst.transitionTable= new TransitionTable();
+        AppConst.regex=null;
+    }
 
     @FXML
     protected void regex(ActionEvent event) throws IOException {

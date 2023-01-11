@@ -6,19 +6,19 @@ public class GenerateRegexByPartie {
 
 
     public static String  generateRegexByQuestions(List<Partie> RegexPartie ){
-        String reg = "";
+        StringBuilder reg = new StringBuilder();
 
         for (Partie partie:RegexPartie){
-            reg+=generateRegexPartie(partie);
+            reg.append(generateRegexPartie(partie));
         }
 
-        return reg;
+        return reg.toString();
     }
 
 
     public static String generateRegexPartie(Partie objet){
         String regex = "";
-        String regexTab[] = {"", "", ""};
+        String[] regexTab = {"", "", ""};
         regexTab[0] = (objet.Prefixe.size()!=0) ? "(" : "";
         for (int i=0; i<objet.Prefixe.size(); i++){
             if(i==objet.Prefixe.size()-1){
