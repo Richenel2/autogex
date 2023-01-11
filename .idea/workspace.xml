@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9942da1f-2432-4a23-a7a6-9dcdc21c1ef8" name="Changes" comment="chang">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/autogex/Question_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/Question_Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/autogex/SelectTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/SelectTypeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/autogex/automate/AutomateRegex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/automate/AutomateRegex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/autogex/automate/GenerateRegexByPartie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/automate/GenerateRegexByPartie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/autogex/model/ConstructeurAutomateImplementation3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/autogex/model/ConstructeurAutomateImplementation3.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/autogex/question_view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/autogex/question_view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
